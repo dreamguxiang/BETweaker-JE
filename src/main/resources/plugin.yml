@@ -1,0 +1,7 @@
+name: BETweaker
+version: '${project.version}'
+main: plugins.qignyu.BETweaker
+api-version: 1.19
+prefix: QingYu
+authors: [ QingYu ]
+description: Porting with BETweaker
