@@ -2,7 +2,6 @@ package plugins.qignyu;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import plugins.qignyu.listeners.PlayerInteract;
-import plugins.qignyu.listeners.PlayerJoin;
 
 public final class BETweaker extends JavaPlugin {
     @Override
@@ -10,7 +9,6 @@ public final class BETweaker extends JavaPlugin {
         // Plugin startup logic
         getLogger().info("BETweaker is enabled!");
         getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
-
     }
 
     @Override

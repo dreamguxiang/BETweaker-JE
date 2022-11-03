@@ -9,14 +9,17 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Collection;
 
 public class BetterHarvestingCrop {
-    public static void LoadBetterHarvestingCrop(Block block, Player player) {
+    public static boolean LoadBetterHarvestingCrop(Block block, Player player) {
         if (block != null) {
             BlockData blockData = block.getBlockData();
             if (blockData.getAsString().contains("age=7")) {
                 Location pos = block.getLocation();
                 block.breakNaturally();
-                pos.getBlock().setBlockData(blockData.getMaterial().createBlockData("[age=0]"));
+                BlockData  newData =  blockData.getMaterial().createBlockData("[age=0]");
+                pos.getBlock().setBlockData(newData);
+                return true;
             }
         }
+        return false;
     }
 }
